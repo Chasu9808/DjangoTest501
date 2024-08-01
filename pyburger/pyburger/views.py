@@ -2,6 +2,17 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 # views - controller 역할.
+
+# 터미널에서, 단위 테스트 연습해보기.
+# python
+# 입력 후, 모양이 >>>
+# from burgers.models import Burger
+# 오류 발생하면,
+# 다시 터미널에서, ctrl + z
+# python manage.py shell
+# from burgers.models import Burger
+# Burger
+
 def main(request):
     # 단순 문자열만 리턴,
     # return HttpResponse("Hello, world.")
