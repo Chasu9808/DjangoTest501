@@ -14,6 +14,16 @@ from django.shortcuts import render
 # Burger
 # 해당 모델 객체의 목록 모두 가져오기.
 # Burger.objects.all()
+# 하나 가져오기
+# Burger.objects.get(name="불고기버거")
+# 임시 변수에 담아서, 객체 형식으로 확인.
+# burger = Burger.objects.get(name="불고기버거")
+# 객체의 각 필드요소를 조회.
+# burger.id
+# burger.name
+# burger.price
+# burger.calories
+
 
 
 def main(request):
