@@ -12,6 +12,9 @@ from django.shortcuts import render
 # python manage.py shell
 # from burgers.models import Burger
 # Burger
+# 해당 모델 객체의 목록 모두 가져오기.
+# Burger.objects.all()
+
 
 def main(request):
     # 단순 문자열만 리턴,
