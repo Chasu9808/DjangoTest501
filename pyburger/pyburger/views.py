@@ -1,6 +1,9 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
+from burgers.models import Burger
+
+
 # views - controller 역할.
 
 # 터미널에서, 단위 테스트 연습해보기.
@@ -54,3 +57,9 @@ def main(request):
 def main2(request):
     # return HttpResponse("오늘 점심 뭐 먹지? 듣고 있나요? 듣고만 있나요? ")
     return render(request, 'main2.html')
+
+
+def burger_list(request):
+    burgers = Burger.objects.all()
+    print(f"전체 햄버거 목록: {burgers}")
+    return render(request, 'burger_list.html')
