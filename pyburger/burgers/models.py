@@ -15,3 +15,6 @@ class Burger(models.Model):
     price = models.IntegerField(default=0)
     calories = models.IntegerField(default=0)
 
+    # 해당 인스턴스를 출력시 나타나는 이름.
+    def __str__(self):
+        return self.name
