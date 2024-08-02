@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from pyburger.views import main, main2, burger_list, lunch_list
+from pyburger.views import main, main2, burger_list, lunch_list, burger_search
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,4 +28,7 @@ urlpatterns = [
 
 #목록 요소 조회 추가.
     path('lunchList/', lunch_list),
+
+    #검색 화면 라우팅.
+    path('search/', burger_search),
 ]

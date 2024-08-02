@@ -91,3 +91,8 @@ def lunch_list(request):
     # 태그 사용시,
     # {% 시작     %}  끝나는 태그
     return render(request, 'lunchmenu_list.html',context)
+
+#버거 검색 기능
+# 검색 폼
+def burger_search(request):
+    return render(request,"burger_search.html")
