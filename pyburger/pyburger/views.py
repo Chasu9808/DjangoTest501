@@ -100,8 +100,14 @@ def burger_search(request):
     # 꺼내서, 키워드만 추출
     keyword = request.GET.get("keyword")
     print(keyword)
-    # 해당 키워드로 , 디비에서 조회
-    burgers = Burger.objects.filter(name__contains=keyword)
-    print(f"검색된 burgers: {burgers}")
+
+    # 키워드가 있다면
+    if keyword is not None:
+        # 해당 키워드로 , 디비에서 조회
+        burgers = Burger.objects.filter(name__contains=keyword)
+        print(f"검색된 burgers: {burgers}")
+    else:
+        burgers = Burger.objects.none()
+
     context = {'burgers': burgers}
     return render(request,"burger_search.html",context)
