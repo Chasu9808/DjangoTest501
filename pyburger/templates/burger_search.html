@@ -6,5 +6,13 @@
 </head>
 <body>
  <h1>버거 검색화면</h1>
+<div>검색된 버거 : </div>
+{% for burger in burgers %}
+    <div>
+        이름 : {{ burger.name }}
+        가격 : {{ burger.price }}원,
+        칼로리 : {{ burger.calories }}kcal
+    </div>     
+ {% endfor %}
 </body>
 </html>
