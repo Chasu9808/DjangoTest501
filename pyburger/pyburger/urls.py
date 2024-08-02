@@ -16,7 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from pyburger.views import main, main2, burger_list
+from pyburger.views import main, main2, burger_list, lunch_list
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     # main 이라는 건, views(컨트롤러 역할), main 함수를 의미함
@@ -24,4 +25,7 @@ urlpatterns = [
     path('main2/', main2),
     #목록 요소 조회 추가.
     path('list/', burger_list),
+
+#목록 요소 조회 추가.
+    path('lunchList/', lunch_list),
 ]
