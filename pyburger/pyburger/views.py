@@ -95,4 +95,12 @@ def lunch_list(request):
 #버거 검색 기능
 # 검색 폼
 def burger_search(request):
+    # 화면, 웹브라우저에서, 전달 받은 검색 키워드를
+    print(request.GET)
+    # 꺼내서, 키워드만 추출
+    keyword = request.GET.get("keyword")
+    print(keyword)
+    # 해당 키워드로 , 디비에서 조회
+    burgers = Burger.objects.filter(name__contains=keyword)
+    print(f"검색된 burgers: {burgers}")
     return render(request,"burger_search.html")
