@@ -8,7 +8,8 @@
 </head>
 <body>
 <h1>Post Add</h1>
-        <form method="get">
+        <form method="post">
+            {% csrf_token %}
             <div>
                 <label>제목</label>
                 <input name="title" type="text">
