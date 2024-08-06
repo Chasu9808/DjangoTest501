@@ -20,7 +20,7 @@ html {
   margin: 0;
   font-family: "Noto Sans KR", serif;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 24px;
   color: #333;
   height: 100%; }
 
@@ -122,9 +122,9 @@ ul.comments {
     ul.posts > li.post {
       padding: 5vw 0 5vw 0; }
       ul.posts > li.post h2 {
-        font-size: 1.3rem; }
+        font-size: 1.8rem; }
       ul.posts > li.post p {
-        font-size: .9rem;
+        font-size: 1.9rem;
         padding-right: 22vw; }
       ul.posts > li.post img {
         width: 20vw;
